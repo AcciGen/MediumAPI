@@ -16,9 +16,10 @@ namespace MediatrCQRSpattern.Application.UseCases.MediumUser.CommandHandlers
         private readonly IApplicationDbContext _applicationDbContext;
         private readonly IMapper _mapper;
 
-        public CreateUserCommandHandler(IApplicationDbContext applicationDbContext)
+        public CreateUserCommandHandler(IApplicationDbContext applicationDbContext, IMapper mapper)
         {
             _applicationDbContext = applicationDbContext;
+            _mapper = mapper;
         }
 
         protected async override Task Handle(CreateUserCommand request, CancellationToken cancellationToken)
