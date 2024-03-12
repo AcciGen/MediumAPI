@@ -12,6 +12,6 @@ namespace MediatrCQRSpattern.Application.Abstractions
     {
         public DbSet<User> Users { get; set; }
 
-        Task SaveChangesAsync(CancellationToken cancellationToken);
+        Task<int> SaveChangesAsync(CancellationToken cancellationToken = default);
     }
 }

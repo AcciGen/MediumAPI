@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using MediatrCQRSpattern.Application.UseCases.MediumUser.Commands;
 using MediatrCQRSpattern.Domain.DTOs;
 using MediatrCQRSpattern.Domain.Entities;
 
@@ -8,7 +9,7 @@ namespace MediatrCQRSpattern.Application.Mappers
     {
         public AutoMapperProfile()
         {
-            CreateMap<User, UserDTO>().ReverseMap();
+            CreateMap<User, CreateUserCommand>().ReverseMap();
         }
     }
 }

@@ -9,13 +9,8 @@ namespace MediatrCQRSpattern.Infrastructure.Persistance
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             :base(options)
         {
-            
+            Database.Migrate();
         }
         public DbSet<User> Users { get; set; }
-
-        Task IApplicationDbContext.SaveChangesAsync(CancellationToken cancellationToken)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

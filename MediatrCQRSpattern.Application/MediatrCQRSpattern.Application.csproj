@@ -24,8 +24,6 @@
     <Folder Include="UseCases\MediumPost\CommandHandlers\" />
     <Folder Include="UseCases\MediumPost\QueryHandlers\" />
     <Folder Include="UseCases\MediumPost\Queries\" />
-    <Folder Include="UseCases\MediumUser\QueryHandlers\" />
-    <Folder Include="UseCases\MediumUser\Queries\" />
   </ItemGroup>
 
 </Project>
