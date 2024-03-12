@@ -26,5 +26,35 @@ namespace MediatrCQRSpattern.API.Controllers
 
             return Ok(result);
         }
+
+        [HttpGet]
+        public async Task<ActionResult<User>> GetUserById(Guid Id)
+        {
+            var result = await _mediator.Send(new GetByUserIdCommandQuery()
+            {
+                Id = Id
+            });
+
+            return Ok(result);
+        }
+
+        [HttpDelete]
+        public async Task<IActionResult> DeleteUser(Guid Id)
+        {
+            await _mediator.Send(new DeleteUserCommand()
+            {
+                Id = Id
+            });
+
+            return Ok("Deleted");
+        }
+
+        [HttpPut]
+        public async Task<ActionResult<User>> UpdateUser(UpdateUserCommand command)
+        {
+            var result = await _mediator.Send(command);
+
+            return Ok(result);
+        }
     }
 }
