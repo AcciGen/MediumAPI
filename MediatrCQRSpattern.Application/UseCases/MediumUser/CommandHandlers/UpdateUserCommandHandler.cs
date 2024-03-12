@@ -21,15 +21,7 @@ namespace MediatrCQRSpattern.Application.UseCases.MediumUser.CommandHandlers
         
             if (user is not null)
             {
-                user.ModifiedDate = DateTime.UtcNow;
-                user.Name = request.Name;
-                user.Email = request.Email;
-                user.Username = request.Username;
-                user.Bio = request.Bio;
-                user.PhotoPath = request.PhotoPath;
-                user.Followers = request.Followers;
-                user.Login = request.Login;
-                user.PasswordHash = request.PasswordHash;
+                _mapper.Map<User>(request);
 
                 await _dbContext.SaveChangesAsync(cancellationToken);
 

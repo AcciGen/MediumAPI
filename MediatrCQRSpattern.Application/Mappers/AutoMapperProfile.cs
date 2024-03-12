@@ -2,14 +2,29 @@
 using MediatrCQRSpattern.Application.UseCases.MediumUser.Commands;
 using MediatrCQRSpattern.Domain.DTOs;
 using MediatrCQRSpattern.Domain.Entities;
+using System.Reflection;
 
 namespace MediatrCQRSpattern.Application.Mappers
 {
-    public class AutoMapperProfile : Profile
+    public static class AutoMapperProfile
     {
-        public AutoMapperProfile()
+        public static TEntity Map<TEntity>(this object entity)
         {
-            CreateMap<User, CreateUserCommand>().ReverseMap();
+            var newEntity = Activator.CreateInstance<TEntity>();
+            var typeNewEntity = newEntity.GetType();
+            var typeObject = entity.GetType();
+
+            PropertyInfo[] properties = typeNewEntity.GetProperties();
+
+            foreach (var property in properties)
+            {
+                var objectProperty = typeObject.GetProperty(property.Name);
+
+                if (objectProperty != null)
+                    property.SetValue(newEntity, objectProperty.GetValue(entity));
+            }
+
+            return (TEntity)newEntity;
         }
     }
 }
