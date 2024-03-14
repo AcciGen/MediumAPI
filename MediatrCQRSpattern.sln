@@ -3,15 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34622.214
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediatrCQRSpattern.API", "MediatrCQRSpattern.API\MediatrCQRSpattern.API.csproj", "{3ECE7088-A7FC-450C-9F7E-CA40FC6F1354}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MediatrCQRSpattern.API", "MediatrCQRSpattern.API\MediatrCQRSpattern.API.csproj", "{3ECE7088-A7FC-450C-9F7E-CA40FC6F1354}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediatrCQRSpattern.Domain", "MediatrCQRSpattern.Domain\MediatrCQRSpattern.Domain.csproj", "{B547B96C-5C8B-469E-B5E4-FEF383F8E889}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MediatrCQRSpattern.Domain", "MediatrCQRSpattern.Domain\MediatrCQRSpattern.Domain.csproj", "{B547B96C-5C8B-469E-B5E4-FEF383F8E889}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediatrCQRSpattern.Infrastructure", "MediatrCQRSpattern.Infrastructure\MediatrCQRSpattern.Infrastructure.csproj", "{E8266837-CB12-4D1E-8F87-65D64600F0EB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MediatrCQRSpattern.Infrastructure", "MediatrCQRSpattern.Infrastructure\MediatrCQRSpattern.Infrastructure.csproj", "{E8266837-CB12-4D1E-8F87-65D64600F0EB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediatrCQRSpattern.Application", "MediatrCQRSpattern.Application\MediatrCQRSpattern.Application.csproj", "{3A524066-F222-4402-AC5B-1060102EB998}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MediatrCQRSpattern.Application", "MediatrCQRSpattern.Application\MediatrCQRSpattern.Application.csproj", "{3A524066-F222-4402-AC5B-1060102EB998}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{F05BF30F-5B35-4285-90F9-174A24CC7991}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediatrCQRSpattern.Application.Tests", "MediatrCQRSpattern.Application.Tests\MediatrCQRSpattern.Application.Tests.csproj", "{8F54086C-3AC3-4725-BB5B-66D473711251}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,6 +37,10 @@ Global
 		{3A524066-F222-4402-AC5B-1060102EB998}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3A524066-F222-4402-AC5B-1060102EB998}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3A524066-F222-4402-AC5B-1060102EB998}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F54086C-3AC3-4725-BB5B-66D473711251}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F54086C-3AC3-4725-BB5B-66D473711251}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F54086C-3AC3-4725-BB5B-66D473711251}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F54086C-3AC3-4725-BB5B-66D473711251}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
